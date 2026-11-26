@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umesh Plumbing Services | Reliable Plumbing Services in Noida</title>
+  <meta
+    name="description"
+    content="Umesh Plumbing Services — Concept website for local plumbing services in Noida, including pipe repair, tap repair, bathroom plumbing, leakage repair, drain unclogging, and fixture installation."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Discreet Concept Demo Notice -->
+  <div class="demo-banner" role="note" aria-label="Concept demo notice">
+    <div class="container demo-banner-inner">
+      <span class="demo-badge">CONCEPT DEMO — NOT OFFICIAL</span>
+      <span class="demo-note">Private design preview for Umesh Plumbing Services. Configure phone &amp; location in script.js.</span>
+    </div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#home" class="brand" aria-label="Umesh Plumbing Services Home">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="8" fill="#0B1F3A" />
+            <path d="M14 6C14 6 9 11.6 9 15.2C9 18.0 11.2 20.2 14 20.2C16.8 20.2 19 18.0 19 15.2C19 11.6 14 6 14 6Z" stroke="#E08E45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.2 15.5C12.2 16.5 13.0 17.3 14 17.3" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="brand-text">Umesh <span class="brand-accent">Plumbing Services</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Contact Us</a>
+      </nav>
+
+      <button
+        type="button"
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="container mobile-menu-inner">
+        <ul class="mobile-nav-links">
+          <li><a href="#home" class="mobile-link">Home</a></li>
+          <li><a href="#services" class="mobile-link">Services</a></li>
+          <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+          <li><a href="#about" class="mobile-link">About</a></li>
+          <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary mobile-cta mobile-link">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/about-plumbing.jpg" alt="" class="hero-img" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-text" data-reveal>
+          <p class="hero-eyebrow">Umesh Plumbing Services &bull; Noida</p>
+          <h1 class="hero-title">Reliable Plumbing Services in Noida</h1>
+          <p class="hero-subtitle">
+            Dependable residential and commercial plumbing support for pipe repairs, leakages,
+            tap and bathroom fittings, drain clearing, and new installations.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              href="#contact"
+              class="btn btn-accent btn-lg"
+              data-cta="call"
+              aria-label="Call Now"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              Call Now
+            </a>
+
+            <a
+              href="#contact"
+              class="btn btn-outline-light btn-lg"
+              data-cta="whatsapp"
+              aria-label="WhatsApp"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+
+          <p class="hero-cta-note" id="heroCtaNotice" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">What We Do</span>
+          <h2 class="section-title">Plumbing Services</h2>
+          <p class="section-desc">
+            Practical plumbing repairs, fittings, and maintenance for homes, apartments, and workplaces.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 10h12a2 2 0 0 1 2 2v6" />
+                <path d="M13 18h8" />
+                <path d="M6 6v8" />
+                <path d="M3 10V6" />
+              </svg>
+            </div>
+            <h3>Pipe Repair &amp; Replacement</h3>
+            <p>
+              Repairing cracked, leaking, or corroded water supply and drainage pipes, as well as replacing worn pipe sections.
+            </p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v4" />
+                <path d="M8 7h8" />
+                <path d="M6 13h9a3 3 0 0 1 3 3v2" />
+                <path d="M18 21a1 1 0 0 0 0-2" />
+              </svg>
+            </div>
+            <h3>Tap &amp; Faucet Repair</h3>
+            <p>
+              Fixing dripping taps, worn washers, stiff spindles, and replacing kitchen, utility, or washbasin mixers.
+            </p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-3Z" />
+                <path d="M6 12V6a2 2 0 0 1 2-2h1" />
+                <path d="M7 20v2" />
+                <path d="M17 20v2" />
+              </svg>
+            </div>
+            <h3>Bathroom &amp; Toilet Plumbing</h3>
+            <p>
+              Servicing flush tanks, cisterns, health faucets, shower mixers, angle valves, and washbasin connections.
+            </p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+              </svg>
+            </div>
+            <h3>Leakage Detection &amp; Repair</h3>
+            <p>
+              Tracing and sealing water seepage around pipe joints, wall connections, sink traps, and overhead tank lines.
+            </p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16" />
+                <path d="M6 6v4a6 6 0 0 0 12 0V6" />
+                <path d="M12 16v5" />
+                <path d="M9 21h6" />
+              </svg>
+            </div>
+            <h3>Sink &amp; Drain Unclogging</h3>
+            <p>
+              Clearing slow or blocked kitchen sinks, bathroom floor traps, bottle traps, and household drain outlets.
+            </p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+            </div>
+            <h3>Fixture &amp; Appliance Installation</h3>
+            <p>
+              Neat installation of new sinks, commodes, showers, water purifier inlets, and washing machine connections.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Work Gallery</span>
+          <h2 class="section-title">Recent Plumbing Work</h2>
+          <p class="section-desc">
+            Replaceable image placeholders ready for real project photos from Umesh Plumbing Services.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Replace this placeholder card with an <img> tag when actual job photos are available -->
+          <figure class="gallery-card" data-reveal>
+            <div class="gallery-placeholder" role="img" aria-label="Work photo placeholder 1: Pipe and valve fitting">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              <span class="gallery-placeholder-title">Work Photo Placeholder 1</span>
+              <span class="gallery-placeholder-hint">Replace with pipe &amp; valve fitting photo</span>
+            </div>
+            <figcaption class="gallery-caption">Pipe &amp; Valve Fitting (Sample Slot)</figcaption>
+          </figure>
+
+          <!-- Replace this placeholder card with an <img> tag when actual job photos are available -->
+          <figure class="gallery-card" data-reveal>
+            <div class="gallery-placeholder" role="img" aria-label="Work photo placeholder 2: Bathroom fixture installation">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              <span class="gallery-placeholder-title">Work Photo Placeholder 2</span>
+              <span class="gallery-placeholder-hint">Replace with bathroom fixture photo</span>
+            </div>
+            <figcaption class="gallery-caption">Bathroom Fixture Installation (Sample Slot)</figcaption>
+          </figure>
+
+          <!-- Replace this placeholder card with an <img> tag when actual job photos are available -->
+          <figure class="gallery-card" data-reveal>
+            <div class="gallery-placeholder" role="img" aria-label="Work photo placeholder 3: Tap and sink repair">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              <span class="gallery-placeholder-title">Work Photo Placeholder 3</span>
+              <span class="gallery-placeholder-hint">Replace with tap &amp; sink repair photo</span>
+            </div>
+            <figcaption class="gallery-caption">Tap &amp; Sink Repair (Sample Slot)</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-media" data-reveal>
+          <img
+            src="assets/about-plumbing.jpg"
+            alt="Cleanly installed copper and PEX plumbing pipes with brass valves"
+            class="about-img"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="about-content" data-reveal>
+          <span class="section-tag">About</span>
+          <h2 class="section-title">About Umesh Plumbing Services</h2>
+          <p class="about-lead">
+            <strong>Umesh Plumbing Services</strong> provides local plumbing repair and installation support in Noida.
+          </p>
+          <p>
+            This concept website is designed to present the business clearly online, making it
+            easy for local residents and property owners to review available services and
+            send an enquiry.
+          </p>
+          <div class="placeholder-box" role="note">
+            <strong>Listing Details Placeholder:</strong> Verified business details (such as
+            exact address, operating hours, and phone number) can be configured in one place
+            inside <code>script.js</code> once confirmed.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Our Approach</span>
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-desc">
+            A straightforward, customer-first approach to everyday plumbing work.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card" data-reveal>
+            <div class="why-number">01</div>
+            <h3>Clear Communication</h3>
+            <p>
+              Simple, direct coordination from initial enquiry to job completion without unnecessary complexity.
+            </p>
+          </div>
+
+          <div class="why-card" data-reveal>
+            <div class="why-number">02</div>
+            <h3>Tidy Workmanship</h3>
+            <p>
+              Careful handling of fittings, tiles, and surrounding areas while carrying out repairs or installations.
+            </p>
+          </div>
+
+          <div class="why-card" data-reveal>
+            <div class="why-number">03</div>
+            <h3>Everyday Plumbing Support</h3>
+            <p>
+              Practical assistance for both minor tap or pipe fixes and larger bathroom or kitchen fixture updates.
+            </p>
+          </div>
+
+          <div class="why-card" data-reveal>
+            <div class="why-number">04</div>
+            <h3>Easy Enquiry Process</h3>
+            <p>
+              Reach out quickly with your requirement so your plumbing issue can be reviewed and scheduled.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="section area-section">
+      <div class="container">
+        <div class="area-card" data-reveal>
+          <div class="area-info">
+            <span class="section-tag section-tag-light">Coverage</span>
+            <h2 class="section-title area-title">Service Area: Noida</h2>
+            <p class="area-desc">
+              Serving plumbing requests in <strong>Noida</strong>. Exact address and specific
+              service localities remain configurable placeholders until verified.
+            </p>
+          </div>
+          <div class="area-badge-wrap">
+            <div class="area-pin-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <div>
+                <span class="area-pin-label">Primary City</span>
+                <strong class="area-pin-value">Noida</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact Umesh Plumbing Services</h2>
+          <p class="section-desc">
+            Send an enquiry below or configure verified contact details in <code>script.js</code>.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Card -->
+          <div class="contact-info-card" data-reveal>
+            <h3>Business Contact Details</h3>
+            <p class="contact-info-sub">
+              Phone, WhatsApp, and location are managed from a single configuration block in <code>script.js</code>.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="contact-list-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="contact-label">Business Name</span>
+                  <strong class="contact-value">Umesh Plumbing Services</strong>
+                </div>
+              </li>
+
+              <li>
+                <span class="contact-list-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="contact-label">Phone / WhatsApp</span>
+                  <span class="contact-placeholder" data-config="phone">[Phone Number — Configure in script.js]</span>
+                </div>
+              </li>
+
+              <li>
+                <span class="contact-list-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-placeholder" data-config="location">[Location in Noida — Configure in script.js]</span>
+                </div>
+              </li>
+
+              <li>
+                <span class="contact-list-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="contact-label">Hours</span>
+                  <span class="contact-placeholder" data-config="hours">[Business Hours — Configure in script.js]</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-cta-group">
+              <a href="#contact" class="btn btn-accent" data-cta="call">Call Now</a>
+              <a href="#contact" class="btn btn-primary" data-cta="whatsapp">WhatsApp</a>
+            </div>
+
+            <div class="contact-cta-placeholder" id="contactCtaNotice" role="note">
+              Set <code>phoneDigits</code> in <code>script.js</code> to activate direct <strong>Call Now</strong> and <strong>WhatsApp</strong> links across the page.
+            </div>
+          </div>
+
+          <!-- Enquiry Form -->
+          <form class="enquiry-form" id="enquiryForm" novalidate data-reveal>
+            <h3>Send an Enquiry</h3>
+            <p class="form-sub">
+              Demo enquiry form &mdash; validates your input locally and displays a preview confirmation.
+            </p>
+
+            <div class="form-group">
+              <label for="nameInput">Full Name <span class="required">*</span></label>
+              <input
+                type="text"
+                id="nameInput"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+              />
+              <span class="error-msg" id="nameError" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phoneInput">Phone Number <span class="required">*</span></label>
+              <input
+                type="tel"
+                id="phoneInput"
+                name="phone"
+                placeholder="Enter your 10-digit phone number"
+                autocomplete="tel"
+                required
+              />
+              <span class="error-msg" id="phoneError" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="messageInput">Message <span class="required">*</span></label>
+              <textarea
+                id="messageInput"
+                name="message"
+                rows="4"
+                placeholder="Briefly describe your plumbing requirement..."
+                required
+              ></textarea>
+              <span class="error-msg" id="messageError" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Enquiry</button>
+
+            <div class="form-status" id="formStatus" role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand brand-footer">
+          <span class="brand-text">Umesh <span class="brand-accent">Plumbing Services</span></span>
+        </a>
+        <p class="footer-desc">
+          Local plumbing services in Noida.
+        </p>
+        <p class="footer-demo-label">CONCEPT DEMO — NOT OFFICIAL</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Service Area: Noida</p>
+        <p class="footer-placeholder" data-config="phone">[Phone Number — Configure in script.js]</p>
+        <p class="footer-placeholder" data-config="location">[Location in Noida — Configure in script.js]</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="currentYear">2026</span> Umesh Plumbing Services. CONCEPT DEMO — NOT OFFICIAL.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
