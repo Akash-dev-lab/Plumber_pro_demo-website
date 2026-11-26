@@ -1,20 +1,20 @@
 /* =========================================================
-   Umesh Plumbing Services — Concept Demo Configuration & JS
+   Umesh Plumbing Services — Starter Landing Page (₹3,000)
    ========================================================= */
 
 /**
- * SINGLE-PLACE BUSINESS CONFIGURATION
- * Update the fields below once verified. Leaving `phoneDigits` empty
- * keeps Call Now & WhatsApp buttons in safe demo-placeholder mode.
+ * CENTRAL BUSINESS CONFIGURATION
+ * Set phoneDigits and whatsappDigits (e.g. "9199XXXXXXXX") to
+ * enable direct one-click calling and WhatsApp chat.
+ * Leaving them empty safely keeps buttons in unverified mode.
  */
 const BUSINESS_CONFIG = {
   businessName: "Umesh Plumbing Services",
-  // Digits with country code, e.g. "9199XXXXXXXX" (no +, spaces, or dashes)
   phoneDigits: "",
-  // Optional formatted phone label shown when phoneDigits is set
-  displayPhone: "[Phone Number — Configure in script.js]",
-  locationText: "[Location in Noida — Configure in script.js]",
-  hoursText: "[Business Hours — Configure in script.js]"
+  whatsappDigits: "",
+  displayPhone: "Available upon confirmation",
+  locationText: "Noida, Uttar Pradesh",
+  hoursText: "Available in Noida"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,29 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroCtaNotice = document.getElementById("heroCtaNotice");
   const contactCtaNotice = document.getElementById("contactCtaNotice");
 
-  const enquiryForm = document.getElementById("enquiryForm");
-  const nameInput = document.getElementById("nameInput");
-  const phoneInput = document.getElementById("phoneInput");
-  const messageInput = document.getElementById("messageInput");
-  const nameError = document.getElementById("nameError");
-  const phoneError = document.getElementById("phoneError");
-  const messageError = document.getElementById("messageError");
-  const formStatus = document.getElementById("formStatus");
-
   const currentYearEl = document.getElementById("currentYear");
   if (currentYearEl) {
     currentYearEl.textContent = String(new Date().getFullYear());
   }
 
-  // Hydrate configurable placeholders and CTA links from BUSINESS_CONFIG
-  const cleanDigits = BUSINESS_CONFIG.phoneDigits.replace(/\D/g, "");
-  const hasPhone = cleanDigits.length >= 10;
+  // Hydrate contact details and CTA buttons from BUSINESS_CONFIG
+  const cleanPhone = BUSINESS_CONFIG.phoneDigits.replace(/\D/g, "");
+  const cleanWhatsApp = (BUSINESS_CONFIG.whatsappDigits || BUSINESS_CONFIG.phoneDigits).replace(/\D/g, "");
+  const hasPhone = cleanPhone.length >= 10;
+  const hasWhatsApp = cleanWhatsApp.length >= 10;
 
   document.querySelectorAll('[data-config="phone"]').forEach((el) => {
-    el.textContent = BUSINESS_CONFIG.displayPhone;
-    if (hasPhone) {
-      el.classList.remove("contact-placeholder", "footer-placeholder");
-    }
+    el.textContent = hasPhone ? BUSINESS_CONFIG.displayPhone : "Available upon confirmation";
   });
 
   document.querySelectorAll('[data-config="location"]').forEach((el) => {
@@ -61,28 +51,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ctaButtons.forEach((button) => {
     const type = button.getAttribute("data-cta");
-    if (hasPhone) {
-      if (type === "call") {
-        button.setAttribute("href", `tel:+${cleanDigits}`);
-      } else if (type === "whatsapp") {
-        button.setAttribute("href", `https://wa.me/${cleanDigits}`);
+    if (type === "call") {
+      if (hasPhone) {
+        button.setAttribute("href", `tel:+${cleanPhone}`);
+      } else {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const noticeMsg = "Verified phone number will be added upon confirmation.";
+          if (heroCtaNotice) heroCtaNotice.textContent = noticeMsg;
+          if (contactCtaNotice) contactCtaNotice.textContent = noticeMsg;
+        });
+      }
+    } else if (type === "whatsapp") {
+      if (hasWhatsApp) {
+        button.setAttribute("href", `https://wa.me/${cleanWhatsApp}`);
         button.setAttribute("target", "_blank");
         button.setAttribute("rel", "noopener noreferrer");
+      } else {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const noticeMsg = "Verified WhatsApp number will be added upon confirmation.";
+          if (heroCtaNotice) heroCtaNotice.textContent = noticeMsg;
+          if (contactCtaNotice) contactCtaNotice.textContent = noticeMsg;
+        });
       }
-    } else {
-      button.addEventListener("click", () => {
-        const label = type === "whatsapp" ? "WhatsApp" : "Call Now";
-        if (heroCtaNotice) {
-          heroCtaNotice.textContent =
-            `${label} is in placeholder mode — set phoneDigits in script.js to enable direct ${label}.`;
-        }
-      });
     }
   });
-
-  if (hasPhone && contactCtaNotice) {
-    contactCtaNotice.hidden = true;
-  }
 
   // Sticky header shadow on scroll
   const handleScrollHeader = () => {
@@ -134,78 +128,5 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach((el) => observer.observe(el));
   } else {
     revealElements.forEach((el) => el.classList.add("revealed"));
-  }
-
-  // Enquiry form validation (client-side demo only)
-  const setFieldError = (inputEl, errorEl, message) => {
-    if (!inputEl || !errorEl) return;
-    if (message) {
-      inputEl.classList.add("invalid");
-      errorEl.textContent = message;
-    } else {
-      inputEl.classList.remove("invalid");
-      errorEl.textContent = "";
-    }
-  };
-
-  const validateForm = () => {
-    let isValid = true;
-
-    const nameVal = nameInput.value.trim();
-    if (nameVal.length < 2) {
-      setFieldError(nameInput, nameError, "Please enter your name (at least 2 characters).");
-      isValid = false;
-    } else {
-      setFieldError(nameInput, nameError, "");
-    }
-
-    const phoneVal = phoneInput.value.trim();
-    const digitsOnly = phoneVal.replace(/\D/g, "");
-    if (digitsOnly.length < 10 || digitsOnly.length > 13) {
-      setFieldError(phoneInput, phoneError, "Please enter a valid 10-digit phone number.");
-      isValid = false;
-    } else {
-      setFieldError(phoneInput, phoneError, "");
-    }
-
-    const messageVal = messageInput.value.trim();
-    if (messageVal.length < 8) {
-      setFieldError(messageInput, messageError, "Please describe your requirement (at least 8 characters).");
-      isValid = false;
-    } else {
-      setFieldError(messageInput, messageError, "");
-    }
-
-    return isValid;
-  };
-
-  if (enquiryForm) {
-    [nameInput, phoneInput, messageInput].forEach((input) => {
-      if (!input) return;
-      input.addEventListener("input", () => {
-        if (input.classList.contains("invalid")) {
-          validateForm();
-        }
-      });
-    });
-
-    enquiryForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      if (formStatus) {
-        formStatus.hidden = true;
-      }
-
-      if (!validateForm()) {
-        return;
-      }
-
-      const submittedName = nameInput.value.trim();
-      if (formStatus) {
-        formStatus.textContent =
-          `Thank you, ${submittedName}. This is a concept demo preview—no data was sent to a server.`;
-        formStatus.hidden = false;
-      }
-      enquiryForm.reset();
-    });
   }
 });
